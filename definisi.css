@@ -1,0 +1,112 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #dae1ee;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container utama */
+div {
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+div:hover {
+    transform: scale(1.02);
+}
+
+/* Gaya gambar */
+img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Gaya judul */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Efek hover pada judul */
+h1:hover {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+/* Paragraf */
+p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Tombol interaktif */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    outline: none;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004494;
+    transform: scale(1);
+}
+
+/* Paragraf info tambahan */
+div p:last-of-type {
+    margin-top: 20px;
+    font-style: italic;
+    color: #007BFF;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

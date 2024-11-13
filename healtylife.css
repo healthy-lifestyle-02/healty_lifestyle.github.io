@@ -1,0 +1,188 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dengan font yang nyaman dibaca */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 50px; /* Memberikan ruang untuk sticky header */
+}
+
+/* Styling header yang sticky */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #28a745;
+    padding: 15px 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo header */
+.sticky-header .logo h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Menu navigasi */
+.sticky-header nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sticky-header nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.sticky-header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.sticky-header nav ul li a:hover {
+    color: #28a745;
+    background-color: white;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* Hero section (gambar latar belakang utama) */
+.hero {
+    position: relative;
+    background: url('gambar/Cuplikan layar 2024-11-06 102739.png') no-repeat center center/cover;
+    height: 80vh;
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+    transition: background 0.5s ease-in-out;
+    background-attachment: fixed; /* Efek Parallax */
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero img {
+    width: 70%;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.1);
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fitur section */
+.features {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f1f1f1;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.features h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature i {
+    font-size: 40px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #555;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer section */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .feature-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .hero img {
+        width: 90%;
+    }
+
+    .sticky-header nav ul li {
+        margin-left: 10px;
+    }
+}

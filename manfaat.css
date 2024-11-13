@@ -1,0 +1,83 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dae1ee;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.intro {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.benefit {
+    background-color: #e8f0f8;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.benefit:hover {
+    background-color: #d0e4f4;
+    transform: scale(1.03);
+}
+
+.benefit h2 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+
+.detail {
+    font-size: 1em;
+    color: #555;
+    display: none; /* Disembunyikan awalnya */
+    margin-top: 10px;
+}
+
+/* Animasi untuk muncul dan hilang */
+.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
